@@ -4,9 +4,9 @@
 
 ![Hello Dolly Block](https://github.com/ndiego/hello-dolly-block/blob/main/.wordpress-org/banner-1544x500.png)
 
-The original and historic [Hello Dolly](https://wordpress.org/plugins/hello-dolly/) plugin, but in block form.
+The historic [Hello Dolly](https://wordpress.org/plugins/hello-dolly/) plugin, but in block form.
 
-Debuted at WordCamp US 2022, the Hello Dolly Block demonstrates how quickly a dynamic block can be built in WordPress using modern techniques, core components, and block supports. This plugin was built using the [Create Block](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/) package and should be considered experimental. 
+Debuted at WordCamp US 2022, the Hello Dolly Block demonstrates how quickly a dynamic block can be created using modern techniques, core components, and block supports. This plugin was built using the [Create Block](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/) package and should be considered experimental. 
 
 Credit to Matt Mullenweg for the original Hello Dolly plugin.
 
