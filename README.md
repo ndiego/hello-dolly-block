@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/ndiego/social-share-block/blob/master/LICENSE.txt)
 
-![Hello Dolly Block](https://github.com/ndiego/social-sharing-block/blob/main/.wordpress-org/banner-1544x500.png)
+![Hello Dolly Block](https://github.com/ndiego/hello-dolly-block/blob/main/.wordpress-org/banner-1544x500.png)
 
 The original and historic [Hello Dolly](https://wordpress.org/plugins/hello-dolly/) plugin, but in block form.
 
