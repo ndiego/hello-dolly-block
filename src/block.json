@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/hello-dolly-block",
+	"version": "0.1.0",
+	"title": "Hello Dolly Block",
+	"category": "widgets",
+	"icon": "format-audio",
+	"description": "Display a random lyric from the song Hello Dolly, by Louis Armstrong.",
+	"attributes": {
+		"textAlign": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"align": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"text": true
+		},
+		"__experimentalBorder": {
+			"radius": true,
+			"color": true,
+			"width": true,
+			"style": true
+		},
+		"html": false,
+		"spacing": {
+			"margin": [ "top", "bottom" ],
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontStyle": true,
+			"__experimentalFontWeight": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true
+		}
+	},
+	"textdomain": "hello-dolly-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

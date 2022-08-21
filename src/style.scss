@@ -1,0 +1,11 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/* We don't want the paragaph wrapping the Hello Dolly lyric to inherit any margin */
+.wp-block-create-block-hello-dolly-block p {
+	margin: 0;
+}
