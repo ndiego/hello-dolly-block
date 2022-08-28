@@ -23,7 +23,9 @@
 function create_block_hello_dolly_block_block_init() {
 	register_block_type( 
 		__DIR__ . '/build',
-		array( 'render_callback' => 'render_hello_dolly_block' )
+		array( 
+			'render_callback' => 'create_block_hello_dolly_block_render_callback' 
+		)
 	);
 }
 add_action( 'init', 'create_block_hello_dolly_block_block_init' );
@@ -31,9 +33,11 @@ add_action( 'init', 'create_block_hello_dolly_block_block_init' );
 /**
  * Renders the Holl Dolly Block on the frontend.
  *
- * @param array $attributes All attributes associated with the block.
+ * @param array    $attributes The block attributes.
+ * @param string   $content    The block content.
+ * @param WP_Block $block      Block instance.
  */
-function render_hello_dolly_block( $attributes ) {
+function create_block_hello_dolly_block_render_callback( $attributes, $content, $block ) {
 	$text_align         = $attributes[ 'textAlign' ];
     $wrapper_attributes = get_block_wrapper_attributes();
 
@@ -43,9 +47,9 @@ function render_hello_dolly_block( $attributes ) {
 		);
 	}
 
-	$hello_dolly_lyric = hello_dolly();
-
-    return sprintf( '<div %1$s>%2$s</div>', $wrapper_attributes, $hello_dolly_lyric );
+	ob_start();
+	require plugin_dir_path( __FILE__ ) . 'build/template.php';
+	return ob_get_clean();
 }
 
 /**
@@ -53,7 +57,7 @@ function render_hello_dolly_block( $attributes ) {
  *
  * @see https://plugins.trac.wordpress.org/browser/hello-dolly/trunk/hello.php
  */
-function hello_dolly_get_lyric() {
+function hello_dolly_block_get_lyric() {
 	/** These are the lyrics to Hello Dolly */
 	$lyrics = "Hello, Dolly
 Well, hello, Dolly
@@ -96,8 +100,8 @@ Dolly'll never go away again";
  *
  * @see https://plugins.trac.wordpress.org/browser/hello-dolly/trunk/hello.php
  */
-function hello_dolly() {
-	$chosen = hello_dolly_get_lyric();
+function hello_dolly_block_render_lyric() {
+	$chosen = hello_dolly_block_get_lyric();
 	$lang   = '';
 	if ( 'en_' !== substr( get_user_locale(), 0, 3 ) ) {
 		$lang = ' lang="en"';

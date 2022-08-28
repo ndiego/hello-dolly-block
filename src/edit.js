@@ -18,7 +18,7 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @see https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/alignment-control
  */
- import { AlignmentControl, BlockControls } from '@wordpress/block-editor';
+import { AlignmentControl, BlockControls } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -41,8 +41,8 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	// If the text align attribute is set, apply the correct class.
 	const blockProps = useBlockProps( {
-		className: textAlign ? 'has-text-align-' + textAlign : ''
-	} )
+		className: textAlign ? 'has-text-align-' + textAlign : '',
+	} );
 
 	return (
 		<>
