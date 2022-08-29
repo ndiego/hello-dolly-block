@@ -27,7 +27,7 @@
 		},
 		"html": false,
 		"spacing": {
-			"margin": [ "top", "bottom" ],
+			"margin": true,
 			"padding": true
 		},
 		"typography": {
