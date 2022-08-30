@@ -5,20 +5,23 @@
  */
 import { __ } from '@wordpress/i18n';
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
- */
-import { useBlockProps } from '@wordpress/block-editor';
+import {
+	/**
+	 * React hook that is used to mark the block wrapper element.
+	 * It provides all the necessary props like the class name.
+	 *
+	 * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
+	 */
+	useBlockProps,
 
-/**
- * Components used to display the text alignment control UI.
- *
- * @see https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/alignment-control
- */
-import { AlignmentControl, BlockControls } from '@wordpress/block-editor';
+	/**
+	 * Components used to display the text alignment control UI.
+	 *
+	 * @see https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/alignment-control
+	 */
+	AlignmentControl,
+	BlockControls,
+} from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -34,11 +37,13 @@ import './editor.scss';
  *
  * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
  *
+ * @param {Object}   param0
+ * @param {Object}   param0.attributes
+ * @param {string}   param0.attributes.textAlign
+ * @param {Function} param0.setAttributes
  * @return {WPElement} Element to render.
  */
-export default function Edit( { attributes, setAttributes } ) {
-	const { textAlign } = attributes;
-
+export default function Edit( { attributes: { textAlign }, setAttributes } ) {
 	// If the text align attribute is set, apply the correct class.
 	const blockProps = useBlockProps( {
 		className: textAlign ? 'has-text-align-' + textAlign : '',
