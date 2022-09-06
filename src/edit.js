@@ -59,9 +59,9 @@ export default function Edit( { attributes: { textAlign }, setAttributes } ) {
 					} }
 				/>
 			</BlockControls>
-			<div { ...blockProps }>
-				<p>{ __( 'Well, hello, Dolly', 'hello-dolly-block' ) }</p>
-			</div>
+			<p { ...blockProps }>
+				{ __( 'Well, hello, Dolly', 'hello-dolly-block' ) }
+			</p>
 		</>
 	);
 }
