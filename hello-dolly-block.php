@@ -39,7 +39,7 @@ add_action( 'init', 'create_block_hello_dolly_block_block_init' );
  */
 function create_block_hello_dolly_block_render_callback( $attributes, $content, $block ) {
 	$text_align         = $attributes[ 'textAlign' ];
-    $wrapper_attributes = get_block_wrapper_attributes();
+	$wrapper_attributes = get_block_wrapper_attributes();
 
 	if ( $text_align ) {
 		$wrapper_attributes = get_block_wrapper_attributes( 
